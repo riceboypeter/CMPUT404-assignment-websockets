@@ -1,0 +1,22 @@
+.sidenav {
+    width: 25%; /* Set the width of the sidebar */
+    right: 0;
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 25px; /* Stay at the top */
+    background-color: #909090; /* Grey */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+
+}
+
+.sidenav button {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+}
+
+.button1 {background-color: green;}
+.button2 {background-color: orange;}
+.button3 {background-color: pink;}

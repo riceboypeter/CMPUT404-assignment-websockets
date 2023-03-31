@@ -22,11 +22,18 @@
         limitations under the License.
     "/>
     <script src="json2.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylish.css">
   </head> 
   <body bgcolor="white" height="100%" width="100%"> 
     <div id="debug"></div>
+    
     <canvas id="c" width="100%" height="100%" style="-webkit-tap-highlight-color: transparent;"></canvas> 
-
+    <div class="sidenav">
+        <a>Please pick a colour first!</a>
+        <button class="button button1" onclick="changeColour('green')">Green</button>
+        <button class="button button2" onclick="changeColour('orange')">Orange</button>
+        <button class="button button3" onclick="changeColour('pink')">Pink</button>
+    </div>
     <script>
       // Fix me
 var canvas = document.getElementById('c');
@@ -236,6 +243,18 @@ mouse = (function() {
     return self;
 })();
 
+function changeColour(ucolour){
+    if (ucolour === "green"){
+        colour = '#00ff00';
+    } 
+    else if (ucolour === "pink"){
+        colour = '#fa73ea';
+    }
+    else if (ucolour === "orange"){
+        colour = '#fa6c07';
+    }
+}
+
 // Add the application specific mouse listeners!
 //XXX: TODO Make these prettier!
 mouse.mousedowners.push(function(x,y,clicked,e) {
@@ -247,7 +266,7 @@ mouse.mouseuppers.push(function(x,y,clicked,e) {
 });
 
 mouse.mousedraggers.push(function(x,y,clicked,e) {
-    addEntityWithoutName({'x':x,'y':y,'colour':'green',
+    addEntityWithoutName({'x':x,'y':y,'colour':colour,
                           'radius':10});
 });
 
