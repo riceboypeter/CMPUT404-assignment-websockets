@@ -59,3 +59,8 @@ Contributors
 * Mark Galloway
 * Abram Hindle
 * Cole Mackenzie
+
+References
+============
+Lots of code used from the course websocket examples 
+https://github.com/uofa-cmput404/cmput404-slides/tree/master/examples/WebSocketsExamples
